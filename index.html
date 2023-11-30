@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/style/css.css">
+    <title>HelpDesk</title>
+</head>
+<body>
+    <h1 class="title"> help-desk</h1>
+    <select class="select" id="dinamic">
+        <option value="inserir"> inserir  </option>
+        <option value="visualizar"> visualizar  </option>
+    </select>
+
+<div id="container-form" style="display: block;"> 
+    <form id="form">
+        <h1 class="title2"> Descreva seu problema: </h1>
+        <label class="subtitle" for="titulo"> Título</label>
+        <input class="input" type="text" name="titulo" id="titulo"/>
+        <label class="subtitle" for="descricao"> Descrição</label>
+        <textarea class="input" id="descricao" name="descricao" rows="4" cols="50" placeholder="Descrição do problema..."></textarea> 
+        
+        
+        <p class="subtitle"> Prioridade </p>
+        <select class="select2" id="prioridade">
+            <option value="leve"> Leve </option>
+            <option value="media"> media </option>
+            <option value="extrema"> Extrema </option>
+        </select>
+        <input class="button" form="form" type="submit" value="enviar"> 
+    </form>
+
+</div>
+<div id="container-ticket" style="display: none;"> 
+    <h3 class="title2"> Listagem de Tickets recebidos: </h3>
+    <h1 class="subtitle"> Prioridade - Leve </h1>
+    <div id="mostrarTicketLeve"></div>
+
+    <h1 class="subtitle"> Prioridade - Media </h1>
+    <div id="mostrarTicketMedio"></div>
+
+    <h1 class="subtitle"> Prioridade - Extrema </h1>
+    <div id="mostrarTicketExtremo"></div>
+</div>
+
+
+
+    <script src="./public/js/script.js"> </script>
+</body>
+</html>
